@@ -1,0 +1,16 @@
+{
+  "name": "man-vs-man",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Man vs Man — auto-battler arena with four fighters and destructible debris, plus a headless test suite.",
+  "scripts": {
+    "start": "python3 -m http.server 8080 --bind 0.0.0.0",
+    "test": "node --max-old-space-size=1500 tests/simulate.mjs",
+    "test:balance": "node --max-old-space-size=1500 tests/simulate.mjs --balance",
+    "balance": "node --max-old-space-size=1500 tests/tune-balance.mjs 20",
+    "balance:matrix": "node --max-old-space-size=1500 tests/tune-balance.mjs 20 --matrix"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}
